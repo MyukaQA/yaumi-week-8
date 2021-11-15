@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\Color;
+use App\Models\Lists;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +18,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/tes', function () {
+    // $color = Color::where('id','2')->first();
+    $user = User::where('id','1')->first();
+    $list = Lists::first();
+    echo $user->task()->count();
+    echo $list->user->name;
 });
