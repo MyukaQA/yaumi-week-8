@@ -11,4 +11,8 @@ class Subtask extends Model
 
     protected $table = 'subtasks';
     protected $guarded = [''];
+
+    public function task(){
+        return $this->belongsTo(Task::class);
+    }
 }

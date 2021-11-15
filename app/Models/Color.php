@@ -11,4 +11,8 @@ class Color extends Model
 
     protected $table = 'colors';
     protected $guarded = [''];
+
+    public function list(){
+        return $this->hasMany(Lists::class,'color_id');
+    } 
 }

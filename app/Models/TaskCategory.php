@@ -11,4 +11,12 @@ class TaskCategory extends Model
 
     protected $table = 'task_categories';
     protected $guarded = [''];
+
+    public function task(){
+        return $this->belongsTo(Task::class);
+    }
+
+    public function category(){
+        return $this->belongsTo(Category::class);
+    }
 }
