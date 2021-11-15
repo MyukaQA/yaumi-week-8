@@ -22,8 +22,8 @@ class CreateTasksTable extends Migration
             $table->date('due_date');
             $table->text('attachment_url');
             $table->text('note');
-            $table->boolean('is_complete');
-            $table->boolean('is_my_day');
+            $table->boolean('is_complete')->default(false);
+            $table->boolean('is_my_day')->default(false);
             $table->timestamps();
         });
     }
