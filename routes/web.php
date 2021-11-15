@@ -22,8 +22,8 @@ Route::get('/', function () {
 
 Route::get('/tes', function () {
     // $color = Color::where('id','2')->first();
-    $user = User::where('id','1')->first();
-    $list = Lists::first();
-    echo $user->task()->count();
-    echo $list->user->name;
+    // $user = User::where('id','1')->first();
+    // $list = Lists::first();
+    // echo $user->task()->count();
+    // echo $list->user->name;
 });
