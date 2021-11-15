@@ -17,7 +17,6 @@ class CreateListsTable extends Migration
             $table->id();
             $table->foreignId('color_id')->constrained();
             $table->foreignId('user_id')->constrained();
-            $table->string('task_id');
             $table->string('name');
             $table->string('password');
             $table->timestamps();
